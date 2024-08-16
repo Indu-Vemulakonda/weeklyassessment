@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-page</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Times New Roman', Times, serif;
+            background: url("background.jpg")
+        }
+        .main{
+            width: 350px;
+            height: 500px;
+            background: rgb(16, 54, 6);
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 5px 20px 50px #c5c3ec;
+        }
+        #check{
+            display: none;
+        }
+        .Sign-up{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        label{
+           color: #fff;
+           font-size: 2.3em;
+           justify-content: center;
+           display: flex;
+           margin: 50px;
+           font-weight: bold;
+           transition:  .5s ease-in-out; 
+        }
+        input{
+            width: 60%;
+            height: 10px;
+            background: #e0dede;
+            justify-content: center;
+            display: flex;
+            margin: 20px auto;
+            padding: 12px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+        button{
+            width: 60%;
+            height: 40px;
+            margin: 10px auto;
+            justify-content: center;
+            display: block;
+            color: #fff;
+            background: rgb(8, 102, 112);
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 30px;
+            border-radius: 5px;
+            transition: .2s ease-in;
+            cursor: pointer;
+        }
+        button:hover{
+            background: #19decb;
+        }
+        .login{
+            height: 460px;
+            background: #eee;
+            border-radius: 60% / 10%;
+            transform: translateY(-180px);
+            transition: .8s ease-in-out;
+        }
+        .login label{
+            color: #137214;
+            transform: scale(.6);
+        }
+        #check:checked ~ .login{
+            transform: translateY(-500px);
+        }
+        #check:checked ~ .login label{
+            transform: scale(1);
+        }
+        #check:checked ~ .Sign-up label{
+            transform: scale(6);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" id="check" aria-hidden="true">
+        <div class="Sign-up">
+        <form>
+            <label for="check" aria-hidden="true">Sign-up</label>
+            <input type="text" name="txt" placeholder="user name" required="">
+            <input type="email" name="email" placeholder="e-mail" required="">
+            <input type="password" name="password" placeholder="password" required="">
+            <button>Sign-up</button>
+        </form>
+        </div>
+        <div class="login">
+            <form>
+                <label for="check" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="e-mail" required="">
+                <input type="password" name="password" placeholder="password" required="">
+                <button>Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
