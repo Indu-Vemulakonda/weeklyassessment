@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+body{
+    background: #f4f4f4;
+}
+.container{
+    max-width: 700px;
+    margin: 20px auto;
+}
+.container .heading{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.container .accordian-wrapper{
+    padding: 0 20px;
+}
+.container .accordian{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.container .accordian.active .accordian-heading{
+    background-color:darkcyan;
+    color: #fff;
+}
+
+.container .accordian.active .accordian-heading i{
+    color: #fff;
+    transform: rotate(180deg);
+    transition: 0.2s 0.1s;
+}
+
+.container .accordian.active .accordian-content{
+    display: block;
+}
+
+.container .accordian-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #fff;
+    border: 2px solid #333;
+    padding: 15px 20px;
+}
+
+.container .accordian-heading h3{
+    font-size: 20px;
+}
+
+.container .accordian-content{
+    padding: 15px 20px;
+    border: 2px solid #333;
+    font-size: 15px;
+    background: orange;
+    border-top: 0;
+    display: none; 
+    animation: alternate 0.2s linear backwards;
+    line-height: 2;
+    transform-origin: top;
+}
+
