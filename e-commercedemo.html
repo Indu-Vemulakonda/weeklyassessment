@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMMERCE WEBSITE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .product-container {
+            display: flex;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 8px;
+        }
+
+        .details-container {
+            margin-left: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #333;
+            margin-top: 8px;
+        }
+
+        .discount {
+            color: #27ac84;
+        }
+
+        .description {
+            margin: 12px 0;
+            color: #777;
+        }
+
+        .size, .color, .quantity {
+            margin: 10px 0;
+        }
+
+        .color-options {
+            display: flex;
+            align-items: center;
+        }
+
+        .color-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .color-dot.selected {
+            border: 2px solid #333;
+        }
+
+        button#buy-now {
+            background-color: #6200ea;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="image-container">
+            <img id="product-image" src="Screenshot 2024-09-02 at 11.10.42.png" alt="Casual T-Shirt">
+        </div>
+        <div class="details-container">
+            <h1>Casual T-Shirt</h1>
+            <p class="price">$15.00 </p>
+            <span class="discount">30% OFF</span>
+            <p class="description">Wrangler is an American manufacturer of jeans and other clothing items, particularly workwear.</p>
+            <div class="size">
+                <span>Size:</span>
+                <select id="size-select">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <div class="color">
+                <span>Color:</span>
+                <div class="color-options">
+                    <div class="color-dot" data-color="red" style="background-color: red;"></div>
+                    <div class="color-dot" data-color="blue" style="background-color: blue;"></div>
+                    <div class="color-dot" data-color="blue" style="background-color: green;"></div>
+                    <div class="color-dot" data-color="pink" style="background-color: rgb(249, 167, 233);"></div>
+                </div>
+            </div>
+            <div class="quantity">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1" min="1">
+            </div>
+            <button id="buy-now">Buy Now</button>
+        </div>
+    </div>
+    <script>
+        function changeColor(color){
+            const productImage = document.getElementById('product-image');
+        switch(color) {
+        case 'red':
+            productImage.src = 'red.jpg';
+            break;
+        case 'blue':
+            productImage.src = 'blue.jpeg';
+            break;
+        case 'green':
+            productImage.src = 'greenimage.jpeg';
+            break;
+        case 'pink':
+            productImage.src = 'pink.jpg';
+            break;
+        default:
+            productImage.src = 'Screenshot 2024-09-02 at 11.10.42.png';
+    }
+}
+
+document.querySelectorAll('.color-dot').forEach(dot => {
+    dot.addEventListener('click', function() {
+        document.querySelectorAll('.color-dot').forEach(dot => dot.classList.remove('selected'));
+        this.classList.add('selected');
+        changeColor(this.dataset.color);
+    });
+});
+    </script>
+</body>
+</html>
