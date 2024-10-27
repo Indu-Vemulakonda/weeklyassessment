@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Portal</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: large;
+}
+
+header {
+  background-color: #1a0a6c;
+  padding: 20px;
+  color: white;
+  font-size: x-large;
+}
+
+header h1 {
+  display: inline;
+}
+
+nav ul {
+  display: inline;
+  float: right;
+  font-size: x-large;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.job {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.job h3 {
+  margin-bottom: 10px;
+}
+
+.job p {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #100667;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#search {
+  margin-top: 40px;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 80%;
+  max-width: 600px;
+}
+
+#searchResults {
+  margin-top: 20px;
+}
+
+#contactForm input, #contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#contactForm button {
+  display: block;
+  width: 100%;
+}
+
+footer {
+  background-color: #06065b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: x-large;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Job Portal</h1>
+      <nav>
+        <ul>
+          <li><a href="#jobs">Jobs</a></li>
+          <li><a href="#search">Search</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="jobs" class="container">
+    <h2>Available Jobs</h2>
+    <div class="job-list">
+      <div class="job">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.T35Lrlq5x87ksxRH3BF6HQHaE8&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>Frontend Developer</h3>
+        <p>Location: Remote</p>
+        <p>Experience: 2+ years</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.ViJ6PhnQDdc4tJdUpRyORwHaDj&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>Backend Developer</h3>
+        <p>Location: New York</p>
+        <p>Experience: 3+ years</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.3SLM0iQFXKm6BH-7Yf5TbgHaEK&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>Full Stack Developer</h3>
+        <p>Location: San Francisco</p>
+        <p>Experience: 4+ years</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.MQXa-D6kPFRcA0vnzEK9SgHaE8&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>Frontend Developer</h3>
+        <p>Location: San Francisco</p>
+        <p>Experience: 2+ years</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.Blq2cgseYOfjHUziPjps-AHaEk&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>Backend Developer</h3>
+        <p>Location: New York</p>
+        <p>Experience: 3+ years</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.T35Lrlq5x87ksxRH3BF6HQHaE8&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>Full Stack Developer</h3>
+        <p>Location: Austin, TX </p>
+        <p>Experience: 4+ years</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.FMvBDoSKPl55TBG1e_G6PAHaEo&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>Data Scientist</h3>
+        <p>Location: Boston</p>
+        <p>Experience: 3+ years</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.gIde61EVOY02D6L4dXDlmAHaE7&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>DevOps Engineer</h3>
+        <p>Location: Chicago</p>
+        <p>Experience: 5+ years</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.2eLzKXL-F5KRFcVFh8zu5gHaE8&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>Database Administrator</h3>
+        <p>Location: Miami</p>
+        <p>Experience: 3+ years</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.-iaZkok4-Iplr9mb62hY4wHaE8&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>Cybersecurity Analyst</h3>
+        <p>Location: Washington, D.C.</p>
+        <p>Experience: 3+ years</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.T35Lrlq5x87ksxRH3BF6HQHaE8&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>Backend Developer</h3>
+        <p>Location: New York</p>
+        <p>Experience: 3+ years</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job">
+        <img src="https://tse3.mm.bing.net/th?id=OIP._0cXELs-BWkPX_g7hVofAgHaEo&pid=Api&P=0&h=180" alt="Frontend Developer" style="width:100%; height:auto;">
+        <h3>Cloud Architect</h3>
+        <p>Location: Dallas</p>
+        <p>Experience: 8+ years</p>
+        <button>Apply Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="search" class="container">
+    <h2>Search Jobs</h2>
+    <input type="text" id="searchInput" placeholder="Search by job title or location">
+    <button onclick="searchJobs()">Search</button>
+    <div id="searchResults"></div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Job Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="job_board.js"></script>
+</body>
+</html>
